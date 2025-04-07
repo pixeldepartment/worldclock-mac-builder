@@ -24,7 +24,7 @@ jobs:
       run: npx electron-packager . WorldClockWidget --platform=darwin --arch=arm64 --out=dist --overwrite
 
     - name: Upload .app as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.3
       with:
         name: WorldClockWidget-macOS-arm64
         path: dist/WorldClockWidget-darwin-arm64
