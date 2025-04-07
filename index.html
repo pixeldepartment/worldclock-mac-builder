@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>World Clock Widget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="widget">
+    <div id="header">
+      <div id="drag-bar"></div>
+      <button id="settings-btn">⚙️</button>
+    </div>
+    <div id="zones"></div>
+    
+    <div id="details" class="hidden"></div>
+    <div id="settings-panel" class="hidden">
+      <label for="zone-select">Land (Mitte):</label>
+      <select id="zone-select">
+        <option value='Asia/Ho_Chi_Minh'>Vietnam</option>
+        <option value='Asia/Phnom_Penh'>Kambodscha</option>
+        <option value='Asia/Vientiane'>Laos</option>
+        <option value='Asia/Bangkok'>Thailand</option>
+        <option value='Asia/Shanghai'>China</option>
+        <option value='Asia/Manila'>Philippinen</option>
+        <option value='Asia/Kuala_Lumpur'>Malaysia</option>
+        <option value='Asia/Jakarta'>Indonesien</option>
+      </select>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

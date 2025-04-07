@@ -1,0 +1,100 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+#widget {
+  width: 420px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 12px;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 90vh;
+  position: relative;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#drag-bar {
+  -webkit-app-region: drag;
+  height: 20px;
+  flex: 1;
+}
+
+#settings-btn {
+  -webkit-app-region: no-drag;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+#zones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.zone, .detail-zone {
+  flex: 1;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 0;
+}
+
+#details {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+button#toggle {
+  margin: 10px auto 0 auto;
+  font-size: 1.4em;
+  background: #666;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+
+#settings-panel {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #222;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  width: 180px;
+}
