@@ -1,0 +1,30 @@
+name: Build macOS .app (arm64)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-mac:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Package macOS .app
+      run: npx electron-packager . WorldClockWidget --platform=darwin --arch=arm64 --out=dist --overwrite
+
+    - name: Upload .app as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: WorldClockWidget-macOS-arm64
+        path: dist/WorldClockWidget-darwin-arm64
